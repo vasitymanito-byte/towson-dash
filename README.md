@@ -2,7 +2,7 @@
 
 An endless runner set in Towson, Maryland. You sprint down York Road past hand-drawn versions of real Towson University and uptown Towson landmarks, dodge barricades and TU shuttles, and collect gold stars. Each star unlocks a real thing to do around Towson.
 
-**▶ Play it:** `https://<your-username>.github.io/towson-dash/` *(update after you deploy)*
+**▶ Play it:** `https://<vasitymanito-byte>.github.io/towson-dash/` 
 
 ![Gameplay screenshot](docs/screenshot.png) <!-- add your own screenshot or GIF here -->
 
