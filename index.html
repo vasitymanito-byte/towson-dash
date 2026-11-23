@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="description" content="Towson Dash: an endless runner through Towson University and uptown Towson, MD.">
+<title>Towson Dash</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="hud" hidden>
+  <span class="pill">Score <b id="score">0</b></span>
+  <span class="pill">Coins <b id="coins">0</b></span>
+  <span class="pill">Passport <b id="pass">0/0</b></span>
+</div>
+<div id="zone"><b id="zName"></b><span id="zSub"></span></div>
+<div id="lm"><small>LANDMARK</small><strong id="lmName"></strong><span id="lmFact"></span></div>
+<div id="toast"><div class="new">NEW ACTIVITY UNLOCKED</div><h3 id="tName"></h3><p id="tDesc"></p></div>
+
+<div class="overlay" id="start">
+  <div class="panel">
+    <h1>Towson Dash</h1>
+    <p class="sub">Run York Road from Stephens Hall to Unitas Stadium. Dodge barricades and TU shuttles, and grab the gold stars. Each star unlocks a real thing to do in Towson.</p>
+    <div class="keys">
+      <div><b>← →</b> or swipe: switch lanes</div>
+      <div><b>↑ / Space</b> or swipe up: jump</div>
+      <div><b>↓</b> or swipe down: slide</div>
+      <div><b>Stars</b> unlock activities</div>
+    </div>
+    <div class="row"><button id="go">Start running</button><button class="ghost" id="browse">Browse activities</button></div>
+    <div id="allList" class="list" hidden></div>
+    <h3 class="sec">Leaderboard</h3>
+    <div id="startBoard"></div>
+    <p class="note">Barricades: jump. "Go Tigers" banners: slide. Shuttles and the Roundabout: change lanes.</p>
+  </div>
+</div>
+
+<div class="overlay" id="over" hidden>
+  <div class="panel">
+    <h2>Busted!</h2>
+    <div class="stats">
+      <div><small>Score</small><strong id="fScore">0</strong></div>
+      <div><small>Best</small><strong id="fBest">0</strong></div>
+      <div><small>Passport</small><strong id="fPass">0</strong></div>
+    </div>
+    <form id="nameForm" class="nameform" hidden>
+      <label for="nameInput">New high score! Your name for the board</label>
+      <div class="row">
+        <input id="nameInput" maxlength="12" autocomplete="nickname" placeholder="TIGER" spellcheck="false">
+        <button type="submit">Save score</button>
+      </div>
+    </form>
+    <div class="row"><button id="again" type="button">Run again</button><button id="menu" type="button" class="ghost">Main menu</button></div>
+    <h3 class="sec">Leaderboard</h3>
+    <div id="overBoard"></div>
+    <h3 class="sec">Landmarks you passed</h3>
+    <div id="lmList" class="lms"></div>
+    <h3 class="sec">Your Towson passport</h3>
+    <div id="passList" class="list"></div>
+    <p class="note">Buildings are drawn by hand from their real architecture. Hours, seasons and event dates change, so check each place's site before you go.</p>
+  </div>
+</div>
+
+<!-- Classic scripts, loaded in order (works from file:// and GitHub Pages, no build step). -->
+<script src="js/core.js"></script>
+<script src="js/textures.js"></script>
+<script src="js/landmarks.js"></script>
+<script src="js/screen.js"></script>
+<script src="js/world.js"></script>
+<script src="js/input.js"></script>
+<script src="js/render.js"></script>
+<script src="js/leaderboard.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
